@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" style="-fx-background-color: #160c0c; -fx-border-color: #160c0c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.flappybird.FXMLController">
+    <children>
+        <Button fx:id="closeButton" layoutX="14.0" layoutY="34.0" onAction="#start" prefHeight="48.0" prefWidth="83.0" style="-fx-background-color: #10d117;" text="play" textFill="#0d0d0d" />
+        <Button fx:id="leaderBoards" layoutX="14.0" layoutY="112.0" onAction="#leaderBoards" prefHeight="48.0" prefWidth="122.0" style="-fx-background-color: #10d117;" text="Leaderboards" />
+      <Label fx:id="score1ID" layoutX="181.0" layoutY="3.0" opacity="0.0" prefHeight="31.0" prefWidth="122.0" text="Label" textFill="#f50000">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="score2ID" layoutX="181.0" layoutY="34.0" opacity="0.0" prefHeight="31.0" prefWidth="122.0" text="Label" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="score3ID" layoutX="181.0" layoutY="65.0" opacity="0.0" prefHeight="31.0" prefWidth="122.0" text="Label" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="score6ID" layoutX="181.0" layoutY="158.0" opacity="0.0" prefHeight="31.0" prefWidth="122.0" text="Label" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="score4ID" layoutX="181.0" layoutY="96.0" opacity="0.0" prefHeight="31.0" prefWidth="122.0" text="Label" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="score5ID" layoutX="181.0" layoutY="127.0" opacity="0.0" prefHeight="31.0" prefWidth="122.0" text="Label" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
