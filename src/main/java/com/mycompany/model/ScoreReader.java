@@ -94,7 +94,12 @@ public class ScoreReader {
         //path+="/classes/score.xml";
         String path = (new File(".")).getAbsolutePath() ;
         path=path.substring(0,path.length()-1);
-        path += "target/classes/score.xml";
+        File isPath = new File(path + "target/classes");
+        if(isPath.isDirectory()){
+                path += "target/classes/score.xml";
+        }else{
+        path += "classes/score.xml";
+        }
         Document dom;
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try {
