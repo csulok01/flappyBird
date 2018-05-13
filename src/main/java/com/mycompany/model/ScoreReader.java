@@ -20,6 +20,7 @@ limitations under the License.
  * #L%
  */
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.logging.Logger;
@@ -86,11 +87,14 @@ public class ScoreReader {
      * @return visszaadja, hogy a kiolvasas sikeres volt-e
      */
     public boolean readXML() {
-        URL url = getClass().getClassLoader().getResource("score.xml");
-        String path = String.valueOf(url);
-        path = path.substring(path.indexOf("/")+1, path.lastIndexOf("/"));
-	path = path.substring(0, path.lastIndexOf("/"));
-        path+="/classes/score.xml";
+        //URL url = getClass().getClassLoader().getResource("score.xml");
+        //String path = String.valueOf(url);
+        //path = path.substring(path.indexOf("/")+1, path.lastIndexOf("/"));
+	//path = path.substring(0, path.lastIndexOf("/"));
+        //path+="/classes/score.xml";
+        String path = (new File(".")).getAbsolutePath() ;
+        path=path.substring(0,path.length()-1);
+        path += "target/classes/score.xml";
         Document dom;
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try {
