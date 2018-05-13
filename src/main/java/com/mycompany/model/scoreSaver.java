@@ -20,6 +20,7 @@ limitations under the License.
  * #L%
  */
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -49,11 +50,14 @@ public class scoreSaver {
      */
     public void saveToXML(List<Integer> scores) throws SAXException, TransformerException {
     	   try {
-                URL url = getClass().getClassLoader().getResource("score.xml");
-                String path = String.valueOf(url);
-                path = path.substring(path.indexOf("/")+1, path.lastIndexOf("/"));
-		path = path.substring(0, path.lastIndexOf("/"));
-                path+="/classes/score.xml";
+                //URL url = getClass().getClassLoader().getResource("score.xml");
+                //String path = String.valueOf(url);
+                //path = path.substring(path.indexOf("/")+1, path.lastIndexOf("/"));
+		//path = path.substring(0, path.lastIndexOf("/"));
+                //path+="/classes/score.xml";
+                String path = (new File(".")).getAbsolutePath() ;
+                path=path.substring(0,path.length()-1);
+                path += "target/classes/score.xml";
                 int score_counter=0;
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
