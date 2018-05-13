@@ -57,7 +57,12 @@ public class scoreSaver {
                 //path+="/classes/score.xml";
                 String path = (new File(".")).getAbsolutePath() ;
                 path=path.substring(0,path.length()-1);
+                File isPath = new File(path + "target/classes");
+                if(isPath.isDirectory()){
                 path += "target/classes/score.xml";
+                }else{
+                path += "classes/score.xml";
+                }
                 int score_counter=0;
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
